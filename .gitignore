@@ -1,0 +1,33 @@
+# IntelliJ / Android Studio
+*.iml
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Gradle
+.gradle/
+
+# Kotlin
+.kotlin/
+
+# Local machine settings
+local.properties
+
+# Build outputs
+build/
+**/build/
+
+# Android
+captures/
+.externalNativeBuild/
+.cxx/
+
+# OS
+.DS_Store
+Thumbs.db
+
+app/src/main/java/com/med/remedy/dummy/*
+app/planning
