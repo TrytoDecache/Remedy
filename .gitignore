@@ -29,5 +29,7 @@ captures/
 .DS_Store
 Thumbs.db
 
-app/src/main/java/com/med/remedy/dummy/*
-app/planning
+app/release/
+**/build/
+*.apk
+*.aab
