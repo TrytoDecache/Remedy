@@ -84,9 +84,18 @@ fun MedicineCard(
         }
     }
 
-    val labelText = reminder.timeLeft(now)?.let {
-        "%02d:%02d".format(it.minutes, it.seconds)
-    } ?: "0s left"
+//    val labelText = reminder.timeLeft(now)?.let {
+//        "%02d:%02d".format(it.minutes, it.seconds)
+//    }
+
+    val lblText = buildString {
+        append(stringResource(R.string.next_medicine).uppercase())
+
+        reminder.timeLeft(now)?.let {
+            append(" in ")
+            append("%02d:%02d".format(it.minutes, it.seconds))
+        }
+    }
 
     Box(
         modifier = modifier
@@ -116,7 +125,7 @@ fun MedicineCard(
                     modifier = Modifier.weight(1f)
                 ) {
                     Text(
-                        text = "${ stringResource(R.string.next_medicine).uppercase() } in $labelText",
+                        text = lblText,
                         color = MaterialTheme.colorScheme.primary,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
